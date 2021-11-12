@@ -9,7 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>pinc-commerce-common</module>
-        <module>pinc-commerce-mvn-config</module>
+        <module>pinc-commerce-mvc-config</module>
+        <module>pinc-commerce-nacos-client</module>
+        <module>pinc-commerce-server-admin</module>
     </modules>
 
     <packaging>pom</packaging>

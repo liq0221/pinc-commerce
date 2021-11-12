@@ -1,0 +1,7 @@
+### 查询服务实例信息
+GET http://127.0.0.1:8000/pinc-commerce-nacos-client/nacos-client/service-instance
+Accept: application/json
+
+### 动态从 Nacos Server 中获取配置信息
+GET http://127.0.0.1:8000/pinc-commerce-nacos-client/nacos-client/project-config
+Accept: application/json

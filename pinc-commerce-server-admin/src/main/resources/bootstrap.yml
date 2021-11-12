@@ -1,0 +1,31 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /pinc-commerce-server-admin
+
+spring:
+  application:
+    name: pinc-commerce-server-admin
+
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 101.42.99.200:8848
+        namespace: 9b54ca2d-ece2-4c45-a772-7b290515a739
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+  thymeleaf:
+    check-template: false
+    check-template-location: false
+
+# 暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  # 需要开放的端点。默认值只打开 health 和 info 两个端点。通过设置 *, 可以开放所有端点
+  endpoint:
+    health:
+      show-details: always

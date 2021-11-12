@@ -1,0 +1,37 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /pinc-commerce-nacos-client
+
+spring:
+  application:
+    name: pinc-commerce-nacos-client # 应用名称也是构成 Nacos 配置管理 dataId 字段的一部分 (当 config.prefix 为空时)
+  cloud:
+    nacos:
+      # 服务注册发现
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现, 设置为 false 即可
+        server-addr: 101.42.99.200:8848
+        # server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850 # Nacos 服务器地址
+        namespace: 9b54ca2d-ece2-4c45-a772-7b290515a739
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+      # 配置管理
+      config:
+        prefix: pinc-commerce
+        file-extension: yaml  # 配置内容的数据格式, 默认为 properties
+        enabled: true     # 如果不想使用 Nacos 进行配置管理, 设置为 false 即可
+        group: DEFAULT_GROUP  # 组, 默认为 DEFAULT_GROUP
+        namespace: 9b54ca2d-ece2-4c45-a772-7b290515a739
+        server-addr: http://101.42.99.200:8848
+
+# 暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

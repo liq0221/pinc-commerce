@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pinc-commerce-mvn-config" />
+        <module name="pinc-commerce-mvc-config" />
+        <module name="pinc-commerce-server-admin" />
+        <module name="pinc-commerce-nacos-client" />
         <module name="pinc-commerce-common" />
       </profile>
     </annotationProcessing>
@@ -14,7 +16,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pinc-commerce-common" options="-parameters" />
-      <module name="pinc-commerce-mvn-config" options="-parameters" />
+      <module name="pinc-commerce-mvc-config" options="-parameters" />
+      <module name="pinc-commerce-nacos-client" options="-parameters" />
+      <module name="pinc-commerce-server-admin" options="-parameters" />
     </option>
   </component>
 </project>

@@ -5,6 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pinc-commerce-common/pom.xml" />
+        <option value="$PROJECT_DIR$/pinc-commerce-mvc-config/pom.xml" />
       </list>
     </option>
   </component>
