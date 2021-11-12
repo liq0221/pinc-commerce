@@ -2,19 +2,25 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pinc-commerce-mvc-config" />
         <module name="pinc-commerce-server-admin" />
+        <module name="pinc-commerce-authority-center" />
         <module name="pinc-commerce-nacos-client" />
         <module name="pinc-commerce-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pinc-commerce-mvn-config" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pinc-commerce-authority-center" options="-parameters" />
       <module name="pinc-commerce-common" options="-parameters" />
       <module name="pinc-commerce-mvc-config" options="-parameters" />
       <module name="pinc-commerce-nacos-client" options="-parameters" />
