@@ -13,6 +13,7 @@
         <module>pinc-commerce-nacos-client</module>
         <module>pinc-commerce-server-admin</module>
         <module>pinc-commerce-authority-center</module>
+        <module>pinc-commerce-gateway</module>
     </modules>
 
     <packaging>pom</packaging>

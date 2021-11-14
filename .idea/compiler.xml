@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pinc-commerce-mvc-config" />
+        <module name="pinc-commerce-gateway" />
         <module name="pinc-commerce-server-admin" />
         <module name="pinc-commerce-authority-center" />
         <module name="pinc-commerce-nacos-client" />
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pinc-commerce-authority-center" options="-parameters" />
       <module name="pinc-commerce-common" options="-parameters" />
+      <module name="pinc-commerce-gateway" options="-parameters" />
       <module name="pinc-commerce-mvc-config" options="-parameters" />
       <module name="pinc-commerce-nacos-client" options="-parameters" />
       <module name="pinc-commerce-server-admin" options="-parameters" />

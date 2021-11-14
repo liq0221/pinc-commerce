@@ -1,5 +1,5 @@
 server:
-  port: 7000
+  port: 7700
   servlet:
     context-path: /pinc-commerce-authority-center
 
