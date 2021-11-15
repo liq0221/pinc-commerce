@@ -10,8 +10,10 @@ import com.alibaba.nacos.api.exception.NacosException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
@@ -22,6 +24,7 @@ import java.util.concurrent.Executor;
  */
 @Service
 @Slf4j
+@DependsOn({"gatewayConfig"})
 public class DynamicRouteServiceImplByNacos {
 
     @Autowired
@@ -29,6 +32,7 @@ public class DynamicRouteServiceImplByNacos {
 
     private ConfigService configService;
 
+    @PostConstruct
     public void init() {
         log.info("gateway route init....");
 
